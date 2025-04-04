@@ -1,0 +1,45 @@
+
+/* Light mode varsayılan stiller */
+:root {
+    --bg-color: #fff; /* Açık tema arkaplan */
+    --text-color: #333; /* Açık tema yazı rengi */
+    --link-color: #0d7b08; /* Açık tema link rengi */
+    --navbar-bg: #f8f9fa; /* Açık tema navbar arkaplanı (Bootstrap default) */
+    --black-bg-color: #121212;
+  }
+
+  /* Dark mode stilleri */
+  .dark {
+    --bg-color: #212529; /* Koyu tema arkaplan */
+    --text-color: #f8f9fa; /* Koyu tema yazı rengi */
+    --link-color: #0d7b08;  /* Koyu tema link rengi (React logosu rengi) */
+     --navbar-bg: #000000; /* Koyu tema navbar arkaplan (Bootstrap default) */
+  }
+
+  body {
+    background-color: var(--black-bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Geçiş efekti */
+  }
+
+  .navbar {
+    background-color: var(--navbar-bg) !important; /*Bootstrap'ın varsayılanını geçersiz kıl.*/
+    transition: background-color 0.3s ease , color 0.5s ease; /* Geçiş efekti */
+  }
+
+  .navbar a {
+    color: var(--text-color) !important; /*Tüm linkler için geçerli*/
+  }
+
+
+  .navbar .nav-link:hover {
+      color: var(--link-color) !important; /* Üzerine gelince link rengi */
+  }
+
+  .icon {
+    color: var(--text-color);
+  }
+  .slider{
+    width: 100%;
+  }
+  

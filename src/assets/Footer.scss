@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+$bg-color : #121212;
+$bg-color2: #f8f9fa;
+$black-text-color:#000;
+$senole-color: #0d7b08;
+$senole-hover-color:#4CAF50;
+$border-color: #c9c9c9;
+$text-color: #ffffff;
+$copyright-border-color: #e0e0e0;
+body.dark-mode{
+    
+    .modern-footer{
+        filter: brightness(0.75);
+    }
+    .footer-icon{
+        color: $black-text-color;
+    }
+    .footer-icon-wrapper {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .footer-text {
+        color: #e0e0e0;
+      }
+    
+      .scroll-to-top {
+        background-color:$black-text-color ;
+        color: #81c784;
+      }
+    
+      .copyright-text {
+        color: $black-text-color;
+      }
+}
+
+.modern-footer {
+    padding: 20px 0;
+    background-image: url('../images/footer-bg.jpg');
+    background-size: cover; /* Resmi kapla */
+    background-position: center;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footer-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+            &:hover {
+                transform: translateY(-5px);
+            }
+          }
+          .footer-icon-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            &:hover {
+                background-color: rgba(76, 175, 80, 0.1);
+            }
+          }
+          .footer-text {
+            color: #333;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+    }
+  }
+  
+  .footer-link-text{
+    text-decoration: none;
+  }
+
+  .footer-icon {
+    color: $senole-color ; 
+    font-size: 2.5rem !important;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-item:hover .footer-icon {
+    color: $senole-hover-color;
+  }
+  
+  /* Scroll to Top Button */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: $senole-color;
+    color: $text-color;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    &:hover {
+      background-color: $senole-hover-color;
+      transform: scale(1.1);
+    }
+    .scroll-icon {
+        font-size: 30px !important;
+      }
+  }
+  
+  .copyright-row {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid $copyright-border-color;
+    .copyright-text {
+        color: #666;
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 576px) {
+    .footer-icon {
+      font-size: 2rem !important;
+    }
+  
+    .footer-text {
+      font-size: 0.8rem;
+    }
+  
+    .footer-item {
+      margin-bottom: 15px;
+    }
+  
+    .scroll-to-top {
+      width: 40px;
+      height: 40px;
+      bottom: 10px;
+      right: 10px;
+      .scroll-icon {
+        font-size: 25px !important;
+      }
+    }
+    .copyright-row {
+        margin-top: 15px;
+        padding-top: 10px;
+        .copyright-text {
+            font-size: 0.7rem;
+          }
+      } 
+  }
+  
+  @media (max-width: 360px) {
+    .footer-icon {
+      font-size: 1.75rem !important;
+    }
+  
+    .footer-text {
+      font-size: 0.7rem;
+    }
+  }
+
+  

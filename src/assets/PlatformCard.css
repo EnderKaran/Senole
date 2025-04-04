@@ -1,0 +1,80 @@
+:root {
+  --font-family: "Poppins", sans-serif;
+  --black-color: #000000;
+  --bg-color: #ffffff;
+  --card-bg-color: #f8f8f8;
+  --card-border-color: #ddd;
+  --primary-color: #ffffff;
+  --secondary-color: #f1f1f1;
+  --hover-scale: 1.03;
+  --transition-speed: 0.3s;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --card-bg-color: #1e1e1e;
+  --card-border-color: #444;
+  --accent-color: #b87333;
+  --hover-filter: brightness(120%) contrast(110%);
+  --primary-color: #1e1e1e;
+  --secondary-color: #252525;
+}
+body.dark-mode .bg-very-light {
+  background-color: #1e1e1e;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bg-very-light {
+  background-color: #f1f1f1;
+}
+
+.logo-card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.logo-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+.logo-card .logo {
+  max-height: 200px;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+  filter: grayscale(100%);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.hepsiburada-logo:hover,
+.trendyol-logo:hover,
+.n11-logo:hover {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 767px) {
+  .logo-card .logo {
+    max-height: 100px;
+    padding: 15px;
+  }
+}
+@media (max-width: 575px) {
+  .logo-card .logo {
+    max-height: 80px;
+    padding: 10px;
+  }
+}/*# sourceMappingURL=PlatformCard.css.map */

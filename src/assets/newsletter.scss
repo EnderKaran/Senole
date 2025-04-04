@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+$bg-color : #121212;
+$black-text-color:#000;
+$border-color: #c9c9c9;
+$text-color: #ffffff;
+body.dark-mode {
+    .newsletter-section__title , .newsletter-section__subtitle{
+        color: $black-text-color;
+    }
+    .social-title{
+        color: $black-text-color;
+    }
+    .social-icon--facebook,.social-icon--instagram,.social-icon--whatsapp,.social-icon--youtube{
+        color: white;
+    }
+    .newsletter-section__button{
+        background-color:#1d1d1d; 
+        &:hover{
+            background-color: $bg-color;
+        }
+    }
+    .newsletter-section__input{
+        background-color:$bg-color;
+        &::placeholder{
+            color: $text-color;
+        }
+        &:focus{
+            color: white;
+        }
+    }
+    .social-icon--facebook , .social-icon--instagram , .social-icon--whatsapp , .social-icon--youtube{
+        background-color: $black-text-color;
+    }
+    .social-icon{
+        color: $text-color;    
+    }
+  }
+
+.newsletter-section{
+    background-image: url('../images/slide3.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    text-align: center;
+    .newsletter-section__title{
+        font-size: 2.5rem; /* Başlık boyutu */
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
+    .newsletter-section__subtitle{
+        font-size: 1.1rem; /* Alt başlık boyutu */
+        margin-bottom: 2rem;
+        color: #ffffff;
+    }
+    .newsletter-section__input{
+        border-radius: 50px 0 0 50px;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.9);
+        &::placeholder{
+            color: #333;
+        }
+    }
+    .newsletter-section__button{
+        border-radius: 0 50px 50px 0;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        background-color: #c19a6b;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        &:hover{
+            background-color: #a67c52;
+        }
+    }
+    .newsletter-section__social-icons{
+        display: flex;
+        align-items: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        span{
+            margin-right: 15px;
+        }
+    }
+    .social-icon{
+        font-size: 2.5rem; /* İkon boyutu */        
+        color: $black-text-color; /* İkon rengi */
+        transition: color 0.3s ease, transform 0.3s ease; /* Yumuşak geçiş */
+        &:hover{
+            transform: translateY(-4px);
+        }
+    }
+    .social-icon--facebook , .social-icon--instagram , .social-icon--whatsapp , .social-icon--youtube{
+        padding: 8px;
+        border-radius: 50%; /* Yuvarlak yap */
+        background-color: $text-color; /* Beyaz arka plan */
+        opacity: 0.825;
+         transition: transform 0.3s ease;
+    }
+
+    .social-icon--facebook:hover {
+        color: #1877f2; /* Facebook rengi */
+    }
+    .social-icon--instagram:hover {
+        color: #e4405f; /* Instagram rengi */
+    }
+    .social-icon--whatsapp:hover{
+        color: #25d366;
+    }
+    .social-icon--youtube:hover{
+        color: #ff0000;
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter-section__title {
+        font-size: 2rem; /* Daha küçük ekranlarda başlık boyutu */
+    }
+    .newsletter-section__subtitle {
+        font-size: 1rem;
+    }
+    .newsletter-section__social-icons{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .newsletter-section__social-icons span{
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}

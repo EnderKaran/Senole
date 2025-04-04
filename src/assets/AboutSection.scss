@@ -1,0 +1,40 @@
+$color1: #f8f9fa;
+$color2: #27ae60;
+$color3:#2c3e50;
+$bg-color : #121212;
+$bg-color2: #f8f9fa;
+$black-text-color:#000;
+$white-text-color:#fff;
+
+.sectioncolor1{
+    background-color: $color1;
+}
+.sectioncolor2 , .sectioncolor3 , .cardtitle{
+    color: $color2;
+}
+.sectioncolor4{
+    color: $color3;
+}
+.border-color{
+    border-color: $color2;
+    border-width: 2px;
+}
+
+
+
+body.dark-mode{
+    .sectioncolor1{
+        background-color: $bg-color;
+    }
+    .sectioncolor2 , .cardtext , .cardtitle , .border-color , .sectioncolor4{
+        color: $white-text-color;
+    }
+    .sectioncolor3{
+        color: $bg-color2;
+    }
+    .cardbody{
+        background-color: $bg-color;
+        border: 1px solid $white-text-color;
+        border-radius: 8px;
+    }
+}

@@ -1,0 +1,126 @@
+$color1: #f8f9fa;
+$color2: #27ae60;
+$bg-color : #1e1e1e;
+$bg-color2: #f8f9fa;
+$black-text-color:#000;
+$white-text-color:#fff;
+$card-shadow-rest: 0 4px 10px rgba(255, 255, 255, 0.04); /* Normal gölge (Koyu Mod - Daha açık) */
+$card-shadow-hover: 0 8px 22px rgb(255, 255, 255);
+body.dark-mode{
+    .certificate-card{
+        background-color: $bg-color;
+    }
+    .certificate-accordion-item {
+        color: $white-text-color;
+    }
+    .certificate-logo-placeholder{
+        background-color: $bg-color;
+    }
+    .certificate-accordion-header button:not(.collapsed) , .certificate-accordion-header button , .certificate-accordion-body{
+        color: $white-text-color;
+    }
+    .MuiSkeleton-root{
+        background-color: rgba(243, 243, 243, 0.11);
+    }
+    .card-textt{
+        color: $white-text-color;
+    }
+}
+.certificate-card {
+    border-radius: 10px; /* Daha yuvarlak köşeler */
+    background-color: #fff;
+    display: flex; /* Flexbox'ı etkinleştir */
+    flex-direction: column; /* İçeriği dikeyde hizala */
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px; /* Logonun kaplayacağı minimum yükseklik */
+}
+
+.certificate-logo {
+    max-width: 185px;
+    max-height: 185px;
+    object-fit: contain; /* Logonun oranlarını koru */
+}
+
+.certificate-logo-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: #e0e0e0; /* Placeholder rengi */
+    border-radius: 4px; /* Hafif yuvarlak köşeler */
+}
+
+.certificate-logo-skeleton {
+    border-radius: 4px; /* İskelet için de köşe yuvarlaklığı */
+}
+
+
+/* Accordion Stilleri */
+.certificate-accordion-item {
+   border: none !important; /* Accordion item kenarlıklarını kaldır */
+   background-color: transparent !important; /* Arka planı şeffaf yap */
+}
+
+.certificate-accordion-header {
+   padding: 0.75rem 1rem; /* Başlık iç boşluğunu ayarla */
+   background-color: transparent !important; /* Arka planı şeffaf yap */
+   border: none !important; /* Kenarlığı kaldır */
+   width: 100%;
+   text-align: center; /* Başlığı ortala */
+   display: flex; /* Flexbox'ı etkinleştir */
+   justify-content: center; /* İçeriği ortala */
+   button{
+    padding: 0.75rem 1rem; /* Butonun iç boşluğu */
+    font-size: 1rem; /* Başlık font boyutu */
+    font-weight: 600; /* Daha kalın font */
+    color: #333; /* Başlık rengi */
+    background-color: transparent !important;
+    box-shadow: none !important; /* Gölgeyi kaldır */
+    border: none !important;
+    text-align: center; /* Metni ortala */
+    width: 100%; /* Tam genişlik */
+    justify-content: center; /* İkonu ve metni ortala (Bootstrap 5.2+ için) */  
+   }
+}
+
+/* Açıkkenki ikon rengi (varsayılanı ezelim) */
+.certificate-accordion-header button:not(.collapsed) {
+   color: $color2; /* Açıkkenki renk (Bootstrap primary rengi) */
+   background-color: transparent !important;
+}
+
+ /* Akordeon ikonunu ortalamak için (Bootstrap 5.2 ve sonrası daha kolay) */
+.accordion-button::after {
+    margin-left: auto; /* İkonu sağa iter */
+    order: 1; /* Gerekirse sırayı değiştirir */
+     margin-left: 0.5rem; /* İkon ile metin arasına boşluk */
+}
+ .accordion-button:not(.collapsed)::after {
+     background-image: var(--bs-accordion-btn-active-icon);
+     transform: var(--bs-accordion-btn-icon-transform);
+ }
+
+.certificate-accordion-body {
+    padding: 1rem 1.25rem; /* İçerik boşluğu */
+    font-size: 0.9rem; /* Açıklama font boyutu */
+    color: #555; /* Açıklama rengi */
+    text-align: left; /* İçeriği sola hizala */
+}
+
+/* Col'un flex özelliklerini kullanmak için */
+.row > .col.d-flex {
+  display: flex;
+  align-items: stretch; /* Kartların aynı yüksekliğe uzamasını sağlar */
+}
+.row > .col.d-flex > .card {
+  flex-grow: 1; /* Kartın col içinde büyümesini sağlar */
+}
+.card-textt{
+    color: $color2;
+    font-weight: 450;
+    font-size: 1rem;
+}

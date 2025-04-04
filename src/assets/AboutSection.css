@@ -1,0 +1,31 @@
+.sectioncolor1 {
+  background-color: #f8f9fa;
+}
+
+.sectioncolor2, .sectioncolor3, .cardtitle {
+  color: #27ae60;
+}
+
+.sectioncolor4 {
+  color: #2c3e50;
+}
+
+.border-color {
+  border-color: #27ae60;
+  border-width: 2px;
+}
+
+body.dark-mode .sectioncolor1 {
+  background-color: #121212;
+}
+body.dark-mode .sectioncolor2, body.dark-mode .cardtext, body.dark-mode .cardtitle, body.dark-mode .border-color, body.dark-mode .sectioncolor4 {
+  color: #fff;
+}
+body.dark-mode .sectioncolor3 {
+  color: #f8f9fa;
+}
+body.dark-mode .cardbody {
+  background-color: #121212;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}/*# sourceMappingURL=AboutSection.css.map */

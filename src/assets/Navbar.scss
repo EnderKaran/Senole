@@ -1,0 +1,70 @@
+$transition-speed: 0.3s; // Geçiş hızı
+.bg-body-tertiary {
+    margin-top: 35px;
+}
+.navbar{
+    position:fixed;
+    width: 100%;
+    transition: background-color $transition-speed; // Arka plan geçişi (dark mode için)
+}
+
+@media (min-width: 992px) {
+    
+    .navbar-nav {
+        margin-left: auto;
+        margin-right: auto;
+       /*justify-content: center; /* Menü linklerini ortalamak için */
+       .nav-link {
+        margin-right: 1rem; /* Boşluğu ayarla */
+        margin-left: 1rem;  /* Boşluğu ayarla */
+    }
+     }
+}
+
+
+/* Responsive offcanvas'ın görünürlüğünü yönet */
+@media (max-width: 991.98px) { /* Bootstrap lg breakpoint'i altı */
+    .offcanvas-lg {
+      width: 50%; /* Küçük ekranlarda offcanvas genişliği */
+      /* Aşağıdaki zorlayıcı stiller kaldırıldı:
+         visibility: visible; ve transform: translateX(0);
+         Böylece offcanvas, show prop'ına bağlı olarak gizli veya görünür olacak. */
+    }
+    
+    .dark-mode .offcanvas-lg {
+      background-color: #000000; /* Arka plan koyulaştırma */
+      color: white;
+      .icon {
+        color: white;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    .offcanvas-lg {
+      width: auto !important;
+      visibility: visible !important;
+      transform: none !important;
+      background-color: transparent !important; /* Arka plan şeffaf */
+      border: none !important;
+      .offcanvas-header {
+        display: none;
+      }
+      .offcanvas-body {
+        display: flex;
+        flex-grow: 1; /* Navbar.Collapse gibi davranması için */
+        padding: 0;   /* Gerekirse padding'i sıfırla */
+        overflow-y: visible;
+      }
+    }
+  }
+
+  body.dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  /* Dark mode için close button (btn-close) beyaz */
+  body.dark-mode .btn-close {
+    filter: invert(1);
+    color: white;
+  }
+  

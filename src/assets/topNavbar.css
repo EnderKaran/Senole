@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+:root {
+  --topnavbar-bg-color: #000000;
+  --topnavbar-icon-color: white;
+  --topnavbar-hover-color: #0d7b08;
+}
+
+body.dark-mode {
+  --topnavbar-bg-color: #000000;
+  --topnavbar-icon-color: #eee;
+  --topnavbar-hover-color: #4CAF50;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.top-navbar {
+  width: 100%;
+  height: 35px;
+  background-color: var(--topnavbar-bg-color);
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+.top-navbar .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.top-navbar .icons .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-navbar .icons .icon a {
+  color: var(--topnavbar-icon-color);
+  font-size: 19px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-navbar .icons .icon a:hover {
+  color: var(--topnavbar-hover-color);
+}
+.top-navbar .icons .icon a .wp-color {
+  color: #25D366;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-navbar .icons .icon a .wp-color:hover {
+  color: #0d7b08;
+}/*# sourceMappingURL=topNavbar.css.map */

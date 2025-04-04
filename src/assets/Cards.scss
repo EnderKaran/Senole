@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-family: "Poppins", sans-serif;
+  --black-color: #000000;
+  --bg-color: #ffffff;
+  --text-color: #333;  // Daha yumuşak bir siyah
+  --card-bg-color: #f8f8f8;
+  --card-border-color: #ddd; // Card için border rengi
+  --accent-color: #8b4513; // Vurgu rengi (zeytin rengi gibi)
+  --hover-filter: grayscale(20%) brightness(100%) contrast(110%);
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #eee; // Daha açık bir gri
+  --card-bg-color: #1e1e1e;
+  --card-border-color: #444; // Koyu modda border
+  --accent-color: #b87333; // Koyu mod vurgu
+  --hover-filter: brightness(120%) contrast(110%);
+  .text{
+    color: #fff;
+  }
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s; // Geçiş efekti
+}
+
+.product-card {
+  background-color: var(--card-bg-color) !important;
+  border: 1px solid var(--card-border-color) !important; // Border eklendi
+  border-radius: 12px !important; // Daha yuvarlak köşeler
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; // Hafif gölge
+  overflow: hidden; // Taşmaları engelle (yuvarlak köşeler için)
+  transition: transform 0.2s ease-in-out; // Hover için transform geçişi
+
+   // Hover durumunda kartı hafifçe yukarı kaldır
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__image {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      filter: grayscale(50%) brightness(80%) contrast(120%); // Başlangıç filtresi
+      transition: filter 0.3s ease; // Filtre geçişi
+
+     &:hover {
+         filter: grayscale(0) brightness(100%) contrast(100%); // Hover'da normal renkler
+     }
+  }
+
+  &__content {
+    padding: 16px !important; // İçeriği daha iyi yerleştir
+  }
+
+  &__title {
+    font-weight: 600 !important;
+    color: var(--accent-color) !important; // Başlık rengi
+    margin-bottom: 8px !important; // Başlık alt boşluğu
+  }
+
+  &__description {
+    line-height: 1.6 !important; // Okunabilirlik için satır yüksekliği
+    font-size: 0.9rem !important; // Font boyutu ayarı
+  }
+}

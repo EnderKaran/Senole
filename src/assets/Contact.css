@@ -1,0 +1,172 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+body.dark-mode .contact-info-section {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background-color: #121212;
+}
+body.dark-mode .contact-info-section .info-item {
+  color: #fff;
+}
+body.dark-mode .contact-info-section .info-item a {
+  color: #fff;
+}
+body.dark-mode .contact-info-section .info-item a:hover {
+  color: #13ad0b;
+  text-decoration: none;
+}
+body.dark-mode .form-title {
+  color: #fff;
+  border-bottom: 2px solid #13ad0b;
+}
+body.dark-mode .form-control {
+  background-color: #121212;
+  color: #fff;
+  border: 1px solid #dee2e6;
+}
+body.dark-mode .form-control:focus {
+  border-color: #13ad0b; /* Bootstrap primary rengi */
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Bootstrap primary rengi */
+}
+body.dark-mode .form-control.is-invalid {
+  border-color: #dc3545; /* Hata rengi */
+}
+body.dark-mode .btn-primary {
+  background-color: #121212;
+  border: 1px solid #fff; /* Kenarlık rengi */
+}
+body.dark-mode .btn-primary:hover {
+  background-color: #084b05; /* Daha koyu bir yeşil */
+  border: 1px solid #084b05; /* Kenarlık rengi */
+}
+body.dark-mode .muted-text {
+  color: #fff;
+}
+body.dark-mode .map-container {
+  border: 1px solid #fff; /* İnce kenarlık */
+}
+
+.contact-page-container {
+  padding-top: 150px;
+  padding-bottom: 0;
+  font-family: "Poppins", sans-serif;
+}
+.contact-page-container .contact-info-section {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 3rem;
+}
+.contact-page-container .contact-info-section .info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: #495057;
+}
+.contact-page-container .contact-info-section .info-item .info-icon {
+  margin-right: 0.75rem;
+  color: #0d7b08; /* Bootstrap primary rengi */
+  font-size: 1.5rem;
+}
+.contact-page-container .contact-info-section .info-item a {
+  color: #495057;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.contact-page-container .contact-info-section .info-item a:hover {
+  color: #13ad0b;
+  text-decoration: none;
+}
+
+.muted-text {
+  color: #6c757d;
+}
+
+.contact-content-section {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  font-family: "Poppins", sans-serif;
+}
+.contact-content-section .form-title {
+  color: #343a40;
+  font-weight: 600;
+  border-bottom: 2px solid #13ad0b;
+  padding-bottom: 0.5rem;
+  display: inline-block; /* Sadece metin kadar alt çizgi */
+}
+
+.contact-form {
+  font-family: "Poppins", sans-serif;
+}
+.contact-form .form-control {
+  border-radius: 0.375rem; /* Bootstrap varsayılanı */
+  padding: 1rem; /* Floating label ile daha iyi görünüm */
+}
+.contact-form .form-control:focus {
+  border-color: #13ad0b; /* Bootstrap primary rengi */
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Bootstrap primary rengi */
+}
+.contact-form .form-control.is-invalid {
+  border-color: #dc3545; /* Hata rengi */
+}
+.contact-form .invalid-feedback {
+  font-size: 0.875em;
+}
+.contact-form textarea.form-control {
+  min-height: 150px; /* Mesaj kutusu minimum yükseklik */
+  padding-top: 1.5rem; /* Floating label ile uyum */
+}
+.contact-form .btn-primary {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: #0d7b08;
+}
+
+.map-container {
+  width: 100%;
+  height: 500px; /* Haritanın yüksekliğini ayarla (formla yaklaşık aynı olsun) */
+  border-radius: 0.5rem; /* Köşeleri yuvarlat */
+  overflow: hidden; /* Yuvarlatılmış köşelerin iframe'i kesmesi için */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  border: 1px solid #dee2e6; /* İnce kenarlık */
+}
+.map-container iframe {
+  display: block; /* Ekstra boşlukları önlemek için */
+}
+
+@media (min-width: 768px) {
+  .info-item {
+    justify-content: flex-start;
+  }
+}
+/* Küçük Ekranlar İçin Ayarlamalar */
+@media (max-width: 767.98px) {
+  .contact-info-section {
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+  }
+  .info-item {
+    justify-content: center; /* İkon ve metni ortala */
+    text-align: center;
+    margin-bottom: 0.5rem; /* Dikeyde biraz boşluk */
+  }
+  .map-container {
+    height: 350px; /* Mobil için harita yüksekliğini azalt */
+  }
+  .contact-content-section {
+    padding-bottom: 3rem;
+  }
+}
+/* Karanlık tema için */
+.leaflet-map-dark .map-control-btn {
+  background-color: #333;
+  color: white;
+  border-color: #444;
+}
+
+.leaflet-map-dark .map-control-btn:hover {
+  background-color: #444;
+}/*# sourceMappingURL=Contact.css.map */

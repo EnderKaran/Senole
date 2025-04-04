@@ -1,0 +1,94 @@
+$primary-color: #ffffff; // Ana renk (siyah)
+$secondary-color: #f1f1f1; // Arka plan rengi (açık gri)
+$blackgray-color: #1e1e1e; // Daha yumuşak bir siyah
+$hover-scale: 1.03; // Hover'da büyüme miktarı
+$transition-speed: 0.3s; // Geçiş hızı
+
+:root {
+    --font-family: "Poppins", sans-serif;
+    --black-color: #000000;
+    --bg-color: #ffffff;
+    --card-bg-color: #f8f8f8;
+    --card-border-color: #ddd;
+ 
+    // PlatformCard için değişkenler
+      --primary-color: #ffffff; // Ana renk (beyaz)
+      --secondary-color: #f1f1f1; // Arka plan rengi (açık gri)
+      --hover-scale: 1.03; // Hover'da büyüme miktarı
+      --transition-speed: 0.3s; // Geçiş hızı
+  }
+  
+  body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #eee;
+    --card-bg-color: #1e1e1e;
+    --card-border-color: #444;
+    --accent-color: #b87333;
+    --hover-filter: brightness(120%) contrast(110%);
+      // PlatformCard için dark mode değişkenleri
+    --primary-color: #1e1e1e; // Koyu arka plan
+    --secondary-color: #252525; // Daha koyu bir gri (container için)
+    .bg-very-light{
+        background-color: $blackgray-color;
+    }
+
+  }
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+.bg-very-light{
+    background-color: $secondary-color;
+}
+.logo-card{
+    background-color: $primary-color;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform $transition-speed ease , box-shadow $transition-speed ease;
+    height: 100%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+    &:hover{
+        transform: scale($hover-scale);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .logo {
+        max-height: 200px; 
+        width: 100%;      
+        height: auto;     
+        transition: filter $transition-speed ease;
+        filter: grayscale(100%); 
+        object-fit: contain;
+        object-position: center; 
+      }
+}
+
+.hepsiburada-logo:hover,
+.trendyol-logo:hover,
+.n11-logo:hover {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 767px) {
+    .logo-card {
+      .logo {
+        max-height: 100px; // Daha küçük ekranlarda logo boyutunu küçült
+        padding: 15px; // Mobil için padding'i azalt
+      }
+    }
+  }
+  
+  @media (max-width: 575px) {
+      .logo-card{
+          .logo{
+              max-height: 80px;
+               padding: 10px;
+          }
+      }
+  }

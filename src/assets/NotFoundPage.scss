@@ -1,0 +1,96 @@
+/* src/pages/NotFoundPage.css */
+
+/* Google Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+
+/* Tüm sayfayı kaplayan ve ortalayan sarmalayıcı */
+.not-found-page-wrapper {
+  min-height: 100vh; /* En az ekran yüksekliği kadar */
+  padding-top: 80px; /* Navigasyon için boşluk (nav yüksekliğine göre ayarlayın) */
+  display: flex;
+  flex-direction: column; /* Nav yukarıda, content ortada */
+  align-items: center;
+  justify-content: center; /* Arka plan rengi */
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden; /* Yatay taşmayı engelle */
+}
+
+/* Navigasyon Stilleri */
+
+
+/* React-Bootstrap Container için ek stil */
+.not-found-container {
+  max-width: 960px; /* Orta boyutta bir container */
+  width: 100%;
+  padding: 2rem 1rem; /* İç boşluk */
+}
+
+/* Başlık Stilleri */
+.not-found-header h1 {
+  font-size: 5rem; /* Biraz ayarlandı */
+  font-weight: 900;
+  color: #333333;
+  line-height: 1;
+  margin-bottom: 0.5rem; /* Alt başlıkla arasına boşluk */
+}
+
+.not-found-header h3 {
+  font-size: 2rem;
+  font-weight: 700; /* 900 yerine 700 */
+  color: #333333;
+  margin-bottom: 0; /* H1 ile arasında boşluk olmasın */
+}
+
+/* Resim Stili */
+.not-found-image {
+  max-width: 100%; /* Col genişliğine sığsın */
+  height: auto; /* Oranı koru */
+  max-height: 400px; /* Maksimum yükseklik */
+}
+
+/* Footer ve Buton Stilleri */
+
+.go-home-button {
+  background-color: #f9b23c !important; /* Bootstrap'i ezmek için !important gerekebilir */
+  border-color: #f9b23c !important;
+  color: #ffffff !important; /* Metin rengi beyaz */
+  font-weight: 600;
+  padding: 0.8rem 1.5rem; /* Buton boyutları */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.go-home-button:hover,
+.go-home-button:focus,
+.go-home-button:active {
+  background-color: #f49a20 !important;
+  border-color: #f49a20 !important;
+  color: #ffffff !important;
+  box-shadow: none !important; /* Focus anındaki gölgeyi kaldır */
+}
+
+
+/* Responsive Ayarlamalar */
+@media (min-width: 768px) { /* md breakpoint (Tablet ve üzeri) */
+  .not-found-header h1 {
+    font-size: 7rem;
+  }
+  .not-found-header h3 {
+    font-size: 2.5rem;
+  }
+  .not-found-image {
+     max-height: 500px; /* Daha büyük ekranlarda resim biraz daha büyüyebilir */
+  }
+}
+
+@media (min-width: 992px) { /* lg breakpoint (Desktop) */
+    .not-found-container {
+       padding: 3rem 1rem;
+    }
+     .not-found-header h1 {
+        font-size: 8rem;
+     }
+     .not-found-header h3 {
+        font-size: 3rem;
+     }
+}
