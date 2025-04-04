@@ -7,8 +7,6 @@ import Home from '../pages/Home';
 import About from '../pages/AboutUs';
 import Product from '../pages/Products';
 import Contact from '../pages/Contact';
-import { SpeedInsights } from "@vercel/speed-insights/react"
-
 
 function App() {
   return (
@@ -26,7 +24,7 @@ function App() {
 
         </Routes>
         </ThemeProvider>
-        <SpeedInsights/>
+       
     </>
   );
 }
