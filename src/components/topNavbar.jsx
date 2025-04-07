@@ -41,13 +41,13 @@ const TopNavbar = () => {
     >
       <div className='icons'>
         <div className='icon'>
-          <a href="https://www.instagram.com/senole.estore/" target='_blank' rel="noopener noreferrer"><InstagramIcon /></a>
+          <a href="https://www.instagram.com/senole.estore/" target='_blank' rel="noopener noreferrer" aria-label="Senole E-Store Instagram Sayfası"><InstagramIcon /></a>
         </div>
         <div className='icon'>
-          <a href="https://www.facebook.com/SenOle.estore/" target='_blank' rel="noopener noreferrer"><FacebookIcon /></a>
+          <a href="https://www.facebook.com/SenOle.estore/" target='_blank' rel="noopener noreferrer" aria-label="Senole E-Store Facebook Sayfası"><FacebookIcon /></a>
         </div>
         <div className='icon'>
-          <a className='wp-color' href="https://wa.me/905367440106" target='_blank' rel="noopener noreferrer"><WhatsAppIcon />Whatsapp Sipariş Hattı</a>
+          <a className='wp-color' href="https://wa.me/905367440106" target='_blank' rel="noopener noreferrer" aria-label="Senole E-Store Whatsapp Sayfası"><WhatsAppIcon />Whatsapp Sipariş Hattı</a>
         </div>
       </div>
     </motion.div>

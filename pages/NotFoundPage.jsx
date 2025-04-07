@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import notFoundImage from '../src/images/404-image.jpg'; // Resmin doğru yolunu belirttiğinizden emin olun
+import notFoundImage from '../src/images/404-image.webp'; // Resmin doğru yolunu belirttiğinizden emin olun
 import '../src/assets/NotFoundPage.css'; // Özel CSS dosyamızı import ediyoruz
 
 const NotFoundPage = () => {

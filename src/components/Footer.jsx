@@ -59,25 +59,25 @@ const ModernFooter = () => {
           <Col xs={6} sm={3} className="footer-item">
             <div className="footer-icon-wrapper">
             <NavLink to="/"> <HomeIcon className="footer-icon" /></NavLink>
-                <Nav.Link as={NavLink} to="/" className='footer-link-text'><span className="footer-text">Anasayfa</span></Nav.Link>
+                <Nav.Link as={NavLink} to="/" className='footer-link-text' aria-label="Anasayfa"><span className="footer-text">Anasayfa</span></Nav.Link>
             </div>
           </Col>
           <Col xs={6} sm={3} className="footer-item">
             <div className="footer-icon-wrapper">
             <NavLink to="/About"> <InfoIcon className="footer-icon" /></NavLink>
-                <Nav.Link as={NavLink} to="/About" className='footer-link-text'><span className="footer-text">Hakkımızda</span></Nav.Link>    
+                <Nav.Link as={NavLink} to="/About" className='footer-link-text' aria-label="Hakkımızda"><span className="footer-text">Hakkımızda</span></Nav.Link>    
             </div>
           </Col>
           <Col xs={6} sm={3} className="footer-item">
             <div className="footer-icon-wrapper">
               <NavLink to="/Products"> <ShoppingBasketIcon className="footer-icon" /></NavLink>
-                <Nav.Link as={NavLink} to="/Products" className='footer-link-text'><span className="footer-text">Ürünler</span></Nav.Link>          
+                <Nav.Link as={NavLink} to="/Products" className='footer-link-text' aria-label="Ürünler"><span className="footer-text">Ürünler</span></Nav.Link>          
             </div>
           </Col>
           <Col xs={6} sm={3} className="footer-item">
             <div className="footer-icon-wrapper">
                <NavLink to="/Contact"> <ContactMailIcon className="footer-icon" /></NavLink>
-                <Nav.Link as={NavLink} to="/Contact" className='footer-link-text'><span className="footer-text">İletişim</span></Nav.Link>   
+                <Nav.Link as={NavLink} to="/Contact" className='footer-link-text' aria-label="İletişim"><span className="footer-text">İletişim</span></Nav.Link>   
             </div>
           </Col>
         </Row>

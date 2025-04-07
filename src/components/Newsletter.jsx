@@ -43,23 +43,23 @@ const Newsletter = () => {
                                 aria-describedby="basic-addon2"
                                 className="newsletter-section__input"
                             />
-                                    <Button href='mailto:bilgi@senole.com' variant="primary" id="button-addon2" className="newsletter-section__button">
+                                    <Button href='mailto:bilgi@senole.com' aria-label="E-posta ile iletişim kur" variant="primary" id="button-addon2" className="newsletter-section__button">
                                 <Send />
                             </Button>
                         </InputGroup>
                     </Form>
                     <div className="newsletter-section__social-icons">
                         <span className='social-title'>#sosyal medyada takip et!</span>
-                        <a href="https://www.facebook.com/SenOle.estore/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/SenOle.estore/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                         <Facebook className="social-icon social-icon--facebook" />
                         </a>
-                        <a href="https://www.instagram.com/senole.estore/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/senole.estore/" target="_blank" rel="noopener noreferrer" aria-label="İnstgram">
                         <Instagram className="social-icon social-icon--instagram" />
                         </a>
-                        <a href="https://wa.me/905367440106" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/905367440106" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
                         <WhatsApp className="social-icon social-icon--whatsapp" />
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
                         <YouTube className="social-icon social-icon--youtube" />
                         </a>
                     </div>

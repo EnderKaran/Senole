@@ -16,11 +16,11 @@ import { EffectFade, Pagination, Parallax, Navigation, Autoplay } from 'swiper/m
 import '../assets/Slider.css'; // Slider stilleri
 
 // Resimler
-import SlideImage1 from '../images/slide1.jpg';
-import SlideImage2 from '../images/slide2.jpg';
-import SlideImage3 from '../images/slide3.jpg';
-import SlideImage4 from '../images/slide4.jpg';
-import SlideImage5 from '../images/slide5.jpg';
+import SlideImage1 from '../images/slide1.webp';
+import SlideImage2 from '../images/slide2.webp';
+import SlideImage3 from '../images/slide3.webp';
+import SlideImage4 from '../images/slide4.webp';
+import SlideImage5 from '../images/slide5.webp';
 
 const MySlider = () => {
   return (

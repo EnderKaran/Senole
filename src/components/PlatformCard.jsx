@@ -2,9 +2,9 @@ import React from 'react';
 import { Card, Container, Row, Col, Image } from 'react-bootstrap';
 import { motion } from 'framer-motion'; // Framer Motion'ı import et
 import '../assets/PlatformCard.css';
-import HepsiburadaLogo from '../images/hepsiburadaLogo.jpg';
-import TrendyolLogo from '../images/trendyol-logo.png';
-import N11Logo from '../images/N11Logo.jpg';
+import HepsiburadaLogo from '../images/hepsiburadaLogo.webp';
+import TrendyolLogo from '../images/trendyol-logo.webp';
+import N11Logo from '../images/N11Logo.webp';
 
 const PlatformCard = () => {
   // Kartlar için animasyon varyantları
@@ -45,7 +45,7 @@ const PlatformCard = () => {
           >
             <Card className="logo-card">
               <motion.div variants={imageVariants} initial="initial" whileHover="hover">
-                <a href='https://www.hepsiburada.com/magaza/senole' target='_blank'><Image src={HepsiburadaLogo} fluid className="logo hepsiburada-logo" /></a>  
+                <a href='https://www.hepsiburada.com/magaza/senole' target='_blank'><Image src={HepsiburadaLogo} alt='HepsiburadaLogo' fluid className="logo hepsiburada-logo" /></a>  
               </motion.div>
             </Card>
           </motion.div>
@@ -61,7 +61,7 @@ const PlatformCard = () => {
           >
             <Card className="logo-card">
               <motion.div variants={imageVariants} initial="initial" whileHover="hover">
-                <a href='https://www.trendyol.com/magaza/senole-dogal-lezzetler-m-739122?sst=0' target='_blank'><Image src={TrendyolLogo} fluid className="logo trendyol-logo" /></a>
+                <a href='https://www.trendyol.com/magaza/senole-dogal-lezzetler-m-739122?sst=0' target='_blank'><Image src={TrendyolLogo} alt='trendyolLogo' fluid className="logo trendyol-logo" /></a>
               </motion.div>
             </Card>
           </motion.div>
@@ -77,7 +77,7 @@ const PlatformCard = () => {
           >
             <Card className="logo-card">
               <motion.div variants={imageVariants} initial="initial" whileHover="hover">
-                <a href='https://www.n11.com/magaza/senole' target='_blank'><Image src={N11Logo} fluid className="logo n11-logo" /></a>
+                <a href='https://www.n11.com/magaza/senole' target='_blank'><Image src={N11Logo} alt='N11logo' fluid className="logo n11-logo" /></a>
               </motion.div>
             </Card>
           </motion.div>

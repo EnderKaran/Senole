@@ -16,8 +16,9 @@ import L from 'leaflet'; // İkon düzeltmesi ve divIcon için
 
 // Import the marker images directly - these will be bundled correctly by build tools like Webpack/Vite
 // (Used by Create React App, Next.js, Vite etc.)
-import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerIcon2x from '../images/marker-icon-2x.webp'; // Adjust the path as necessary
+import markerIcon from '../images/marker-icon.webp';
+
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
 import '../assets/Contact.css'; // CSS dosyamız

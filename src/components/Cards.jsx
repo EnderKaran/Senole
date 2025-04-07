@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Grid, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
-import ZeytinImage from '../images/ZeytinImage.png';
-import ZeytinYagiImage from '../images/ZeytinYagiImage.png';
+import ZeytinImage from '../images/ZeytinImage.webp';
+import ZeytinYagiImage from '../images/ZeytinYagiImage.webp';
 import { Link } from 'react-router-dom';
 import '../assets/Cards.css'; // SCSS dosyasını import et
 

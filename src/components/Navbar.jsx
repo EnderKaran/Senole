@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Container, Offcanvas, Nav } from 'react-bootstrap';
 import { NavLink , Outlet } from 'react-router-dom';
-import SenoleLogo from '../images/senole.png';
+import SenoleLogo from '../images/senole.webp';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { motion } from 'framer-motion';
@@ -93,7 +93,7 @@ const Navbarr = () => {
                         <img src={SenoleLogo} alt="Senole Logo" width="200" height="auto" />
                     </Navbar.Brand>
 
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setShowOffcanvas(true)} />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" aria-expanded="true" onClick={() => setShowOffcanvas(true)} />
 
                     <Offcanvas show={showOffcanvas} onHide={() => setShowOffcanvas(false)} placement="end" responsive="lg">
                         <Offcanvas.Header closeButton>
@@ -108,7 +108,7 @@ const Navbarr = () => {
                                 <Outlet />
                             </Nav>
                             <Nav>
-                                <Nav.Link onClick={toggleDarkMode} style={{ cursor: 'pointer' }}>
+                                <Nav.Link onClick={toggleDarkMode} aria-label="Menüyü Kapat" style={{ cursor: 'pointer' }}>
                                     {isDarkMode ? <LightModeIcon className="icon" /> : <DarkModeIcon className="icon" />}
                                 </Nav.Link>
                             </Nav>

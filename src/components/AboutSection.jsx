@@ -2,8 +2,8 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import '../assets/AboutSection.css';
-import helalSertifikasi from '../images/helal-belgesi.jpg';
-import isoSertifikasi from '../images/iso-22000.jpg';
+import helalSertifikasi from '../images/helal-belgesi.webp';
+import isoSertifikasi from '../images/iso-22000.webp';
 
 const AboutPage = () => {
     const certificates = [
